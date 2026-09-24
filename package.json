@@ -51,6 +51,7 @@
     "test:schema": "node --import tsx --test tests/node/schema-backlog.test.ts",
     "load:x402": "tsx scripts/load-x402-verify.ts",
     "load:rate-limit": "tsx scripts/load-rate-limit.ts",
+    "fault:profile": "tsx scripts/run-fault-injection-profile.ts",
     "warm:vs-index": "tsx scripts/warm-vs-index.ts"
   },
   "dependencies": {
