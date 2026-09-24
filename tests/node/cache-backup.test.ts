@@ -163,7 +163,9 @@ test("failure: an unknown table is a structural failure", () => {
 test("failure: an empty snapshot cannot be treated as a verified backup", () => {
   const report = verifyCacheBackup(fixtureJson("empty-payload.json"));
   assert.equal(report.ok, false);
-  assert.ok(report.findings.some((f) => f.code === "BACKUP_EMPTY"));
+  // Self-consistent checksum → the ONLY finding must be emptiness itself, so
+  // a checksum mismatch can never mask (or be mistaken for) the empty gate.
+  assert.deepEqual(report.findings.map((f) => f.code), ["BACKUP_EMPTY"]);
 });
 
 test("failure: non-object rows are structural failures", () => {

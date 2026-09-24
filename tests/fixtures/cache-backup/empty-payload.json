@@ -8,7 +8,7 @@
     "network": "stellar:testnet",
     "appVersion": "0.1.0"
   },
-  "checksum": "9dc34491ea02f30e3e2e934aef4e994ca29fad49f7b041f8aaf20bdbff06c72a",
+  "checksum": "e5881580fdc6bccc7f420f85c6e7fef27f9836c689618273c078628043a076b8",
   "tables": {
     "claims": [],
     "challengers": [],
