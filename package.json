@@ -38,6 +38,7 @@
     "deploy:contract": "tsx --env-file-if-exists=.env.local deploy/deploy.ts",
     "verify:deployment": "tsx --env-file-if-exists=.env.local scripts/verify-deployment.ts",
     "verify:artifacts": "tsx scripts/verify-artifact-provenance.ts",
+    "verify:cache-backup": "node --import tsx scripts/verify-cache-backup.ts",
     "verify:analytics": "tsx scripts/check-analytics-gates.ts",
     "smoke:x402": "tsx --env-file-if-exists=.env.local scripts/x402-stellar-smoke.ts",
     "smoke:x402:http": "tsx --env-file-if-exists=.env.local scripts/x402-http-smoke.ts",
@@ -51,8 +52,9 @@
     "test:schema": "node --import tsx --test tests/node/schema-backlog.test.ts",
     "load:x402": "tsx scripts/load-x402-verify.ts",
     "load:rate-limit": "tsx scripts/load-rate-limit.ts",
-    "fault:profile": "tsx scripts/run-fault-injection-profile.ts",
-    "warm:vs-index": "tsx scripts/warm-vs-index.ts"
+    "warm:vs-index": "tsx scripts/warm-vs-index.ts",
+    "backup:read-index": "tsx --env-file-if-exists=.env.local scripts/backup-read-index.ts",
+    "restore:read-index": "tsx --env-file-if-exists=.env.local scripts/restore-read-index.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
